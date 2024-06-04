@@ -1,0 +1,486 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+@import './assets/bootstrap/bootstrap.min.css';
+
+
+.puppy-container-flude {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .puppy-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+  
+  .puppy-card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+  }
+  
+  .puppy-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .puppy-col-sm-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .puppy-mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  
+  .puppy-mt-3 {
+    margin-top: 1rem !important;
+  }
+  
+  .puppy-text-editor {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    min-height: 600px;
+    padding: 0.75rem;
+    background-color: #fff;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+
+  
+.text-editor {
+    background-color: white;
+    border-radius: 12px;
+    height: 600px;
+    overflow-y: scroll;
+    padding: 10px;
+
+}
+
+.puppy-modal-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.puppy-modal-body {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.puppy-modal-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.puppy-form-text {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Focus state */
+.puppy-form-text:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Disabled state */
+.puppy-form-text:disabled,
+.puppy-form-text[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+/* Placeholder styling */
+.puppy-form-text::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+/* IE placeholder styling */
+.puppy-form-text:-ms-input-placeholder {
+    color: #6c757d;
+}
+
+/* Edge placeholder styling */
+.puppy-form-text::-ms-input-placeholder {
+    color: #6c757d;
+}
+
+/* Invalid state */
+.puppy-form-text.is-invalid {
+    border-color: #e3342f;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12 12%27%3e%3cpath fill=%27%23e3342f%27 d=%27M6.293 10.293l4.242-4.242-4.242-4.242-4.242 4.242 4.242 4.242z%27/%3e%3c/svg%3e');
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* Valid state */
+.puppy-form-text.is-valid {
+    border-color: #38c172;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12 12%27%3e%3cpath fill=%27%2338c172%27 d=%27M4.854 9.854l-3.708-3.708 1.414-1.414 2.294 2.293 5.707-5.707 1.414 1.414-7.121 7.122z%27/%3e%3c/svg%3e');
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* Base button styles */
+.puppy-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.puppy-btn:focus,
+.puppy-btn:hover {
+    text-decoration: none;
+}
+
+/* Primary button styles */
+.puppy-btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.puppy-btn-primary:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.puppy-btn-primary:focus,
+.puppy-btn-primary.focus {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004085;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+/* Danger button styles */
+.puppy-btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.puppy-btn-danger:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.puppy-btn-danger:focus,
+.puppy-btn-danger.focus {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+    box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+}
+
+.image-property-box {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.image-property-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.image-property-box input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* Thumbnail */
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Rounded */
+.rounded {
+    border-radius: 0.25rem !important;
+}
+
+/* Rounded Corners (various levels) */
+.rounded-1 {
+    border-radius: 0.2rem !important;
+}
+
+.rounded-2 {
+    border-radius: 0.25rem !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+/* Image Fluid (Responsive) */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .puppy-table-striped {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .puppy-table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  
+  .puppy-table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  
+  .puppy-table-dark {
+    color: #fff;
+    background-color: #212529;
+  }
+  
+  .puppy-table-dark th,
+  .puppy-table-dark td,
+  .puppy-table-dark thead th {
+    border-color: #32383e;
+  }
+  
+  .puppy-table-dark.puppy-table-bordered {
+    border: 0;
+  }
+  
+  .puppy-table-borderless {
+    border: 0;
+  }
+   */
+
+.puppy-table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    
+}
+
+.puppy-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border: 1px solid black;
+}
+
+.puppy-table .puppy-th,
+.puppy-table .puppy-td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.puppy-table .puppy-thead .puppy-th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.puppy-table .puppy-tbody+.puppy-tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.puppy-table .puppy-table {
+    background-color: #fff;
+}
+
+.puppy-table-sm .puppy-th,
+.puppy-table-sm .puppy-td {
+    padding: 0.3rem;
+}
+
+.puppy-table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.puppy-table-bordered .puppy-th,
+.puppy-table-bordered .puppy-td {
+    border: 1px solid #000000;
+}
+
+.puppy-table-bordered .puppy-thead .puppy-th,
+.puppy-table-bordered .puppy-thead .puppy-td {
+    border-bottom-width: 2px;
+}
+
+.puppy-table-striped .puppy-tbody .puppy-tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.puppy-table-hover .puppy-tbody .puppy-tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.puppy-table-dark,
+.puppy-table-dark .puppy-th,
+.puppy-table-dark .puppy-td {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.puppy-table-dark .puppy-th,
+.puppy-table-dark .puppy-td,
+.puppy-table-dark .puppy-thead .puppy-th,
+.puppy-table-dark .puppy-tbody+.puppy-tbody {
+    border-color: #454d55;
+}
+
+.puppy-table-bordered .puppy-table-dark {
+    border: 0;
+}
+
+.puppy-table-dark .puppy-table-striped .puppy-tbody .puppy-tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.puppy-table-dark .puppy-table-hover .puppy-tbody .puppy-tr:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+@media (max-width: 575.98px) {
+    .puppy-table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    .puppy-table-responsive-sm>.puppy-table-bordered {
+        border: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .puppy-table-responsive-md {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    .puppy-table-responsive-md>.puppy-table-bordered {
+        border: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .puppy-table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+         
+    }
+}
+
+
+.puppy-btn-group {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+  
+  
+  
+  .puppy-btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .puppy-btn-secondary:hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  
+  .puppy-form-select {
+    display: inline-block;
+    width: auto;
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .puppy-form-select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
