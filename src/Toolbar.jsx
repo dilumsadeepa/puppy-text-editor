@@ -106,11 +106,11 @@ const Toolbar = ({
 
   const createLink = async () => {
 
-    saveSelection();
-    let url = await handleModal("Enter the URL :");
-    // document.getElementById("text-area").focus();
-    restoreSelection();
-    // let url = prompt("Entert the Link");
+    // saveSelection();
+    // let url = await handleModal("Enter the URL :");
+    // // document.getElementById("text-area").focus();
+    // restoreSelection();
+    let url = prompt("Entert the Link");
 
     if (url !== null) {
 
@@ -121,17 +121,20 @@ const Toolbar = ({
         onModify('createLink', false, url);
       }
     }
-    setSavedSelection(null);
+    // setSavedSelection(null);
 
   }
 
   const addImage = async () => {
 
-    const pos = getCursorPos();
-    const url = await handleModal("Enter the URL :");
-    const imgwidth = await handleModal("Enter the Width :");
-    const imgheight = await handleModal("Enter the Height :");
-    setCursorPos(pos);
+    // const pos = getCursorPos();
+    // const url = await handleModal("Enter the URL :");
+    // const imgwidth = await handleModal("Enter the Width :");
+    // const imgheight = await handleModal("Enter the Height :");
+    // setCursorPos(pos);
+    let url = prompt("Enter the URL :");
+    let imgwidth = prompt("Enter the Width :");
+    let imgheight = prompt("Enter the Height :");
     if (url) {
       const imageCode = `<br><img src='${url}' style="width:${imgwidth}px; height:${imgheight}px;" alt='image' />`;
       document.execCommand('insertHTML', false, imageCode);
@@ -149,12 +152,19 @@ const Toolbar = ({
 
 
   const addVideo = async () => {
-    const pos = getCursorPos();
-    const url = await handleModal('Enter the Video URL :');
-    const videowidth = await handleModal('Enter the Width :');
-    const videoheight = await handleModal('Enter the Height :');
-    const controls = await handleModal('Show Controls (yes/no) :') === 'yes';
-    setCursorPos(pos);
+    // const pos = getCursorPos();
+    // const url = await handleModal('Enter the Video URL :');
+    // const videowidth = await handleModal('Enter the Width :');
+    // const videoheight = await handleModal('Enter the Height :');
+    // const controls = await handleModal('Show Controls (yes/no) :') === 'yes';
+
+    // setCursorPos(pos);
+
+    let url = prompt('Enter the Video URL :');
+    let videowidth = prompt('Enter the Width :');
+    let videoheight = prompt('Enter the Height :');
+    let controls = prompt('Show Controls (yes/no) :') === 'yes';
+
     if (url) {
       let videoCode;
       if (isYouTubeUrl(url)) {
@@ -169,12 +179,18 @@ const Toolbar = ({
 
 
   const addTable = async () => {
-    const pos = getCursorPos();
-    const rows = await handleModal('Enter the number of rows:');
-    const columns = await handleModal('Enter the number of columns:');
-    const className = await handleModal('Select Table Style: [table-bordered, table-hover, table-striped, table-dark, table-borderless]');
+    // const pos = getCursorPos();
+    // const rows = await handleModal('Enter the number of rows:');
+    // const columns = await handleModal('Enter the number of columns:');
+    // const className = await handleModal('Select Table Style: [table-bordered, table-hover, table-striped, table-dark, table-borderless]');
 
-    setCursorPos(pos);
+    // setCursorPos(pos);
+
+    let rows = prompt('Enter the number of rows:');
+    let columns = prompt('Enter the number of columns:');
+    let className = prompt('Select Table Style: [table-bordered, table-hover, table-striped, table-dark, table-borderless]');
+
+
     if (rows && columns) {
       let tableCode = '<div class="table-responsive">';
 
@@ -204,6 +220,7 @@ const Toolbar = ({
     const img = e.target;
     setSelectedImage(img);
     setImageProps({ width: img.style.width, height: img.style.height, className: img.className });
+    document.getElementById('text-area').style.zIndex = 1;
     setShowImagePropertyBox(true);
   };
 
@@ -251,12 +268,12 @@ const Toolbar = ({
     textArea.addEventListener('click', (e) => {
       if (e.target.tagName === 'IMG') {
         handleImageClick(e);
-      } else if (e.target.tagName === 'VIDEO') {
-        handleVideoClick(e);
+      // } else if (e.target.tagName === 'VIDEO') {
+      //   handleVideoClick(e);
       } else {
         setShowImagePropertyBox(false);
-        setShowVideoPropertyBox(false);
-        setShowTablePropertyBox(false);
+        // setShowVideoPropertyBox(false);
+        // setShowTablePropertyBox(false);
       }
     });
   }, []);
